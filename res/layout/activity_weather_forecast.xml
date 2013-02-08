@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    android:orientation="vertical"
+    tools:context=".WeatherForecast" >
+
+   
+
+    <LinearLayout
+        style="@android:style/Widget.CompoundButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/new_request_editText"
+            style="@android:style/Widget.EditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Request City Info" />
+
+        <Button
+            android:maxLines="1"
+            android:id="@+id/request_info_button"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:background="@drawable/red_background_button"
+            android:text="@string/request_info">
+        </Button>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/city_state_listView"       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:drawable/list_selector_background" />
+
+</LinearLayout>
